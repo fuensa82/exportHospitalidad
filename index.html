@@ -2,22 +2,35 @@
 <html>
 <head>
 	<title>Page Title</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="stylesheet" href="librerias/jquerymobile/jquery.mobile.custom.theme.css" />
+    <link rel="stylesheet" href="librerias/jquerymobile/jquery.mobile.custom.structure.css" />
+    <script src="librerias/jquery.js"></script>
+    <script src="librerias/jquerymobile/jquery.mobile.custom.js"></script>
     <script src="./datosJSON/datosPersonas.json"></script>
+    
+    <!--script src="librerias/underscore.js"></script-->
+    <script src="js/app.js"></script>
+    
 </head>
 
 <body>
+    <div data-role="page">
+
+        <div data-role="header">
+            <h1>Hospitalidad de Lourdes</h1>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+
     <!-- Pestañas -->
 	<div data-role="tabs" id="tabs">
       <div data-role="navbar">
         <ul>
-          <li><a href="#personas" data-ajax="false">Personas</a></li>
-          <li><a href="#autobuses" data-ajax="false">Autobuses</a></li>
-          <li><a href="#alojamientos" data-ajax="false">Alojamientos</a></li>
-        </ul>
+            <li><a href="#personas" data-ajax="false">Personas</a></li>
+            <li><a href="#autobuses" data-ajax="false">Autobuses</a></li>
+            <li><a href="#alojamientos" data-ajax="false">Alojamientos</a></li>
+        </ul>
       </div>
       <div id="personas" class="ui-body-d ui-content">
             Personas
@@ -29,5 +42,13 @@
             Alojamientos
           </div>
     </div>
+
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed">
+    <h4>Pie de página</h4>
+</div><!-- /footer -->
+</div><!-- /page -->
+
 </body>
 </html>
